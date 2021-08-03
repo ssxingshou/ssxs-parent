@@ -1,0 +1,7 @@
+stages:
+- name: compile
+  steps:
+  - runScriptConfig:
+      image: swr.cn-south-1.myhuaweicloud.com/ssxs/ssxs-centos7-jdk8-maven3:4
+      shellScript: mvn clean deploy -DskipTests -U
+timeout: 60
